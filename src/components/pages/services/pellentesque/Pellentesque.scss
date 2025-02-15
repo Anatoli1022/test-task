@@ -1,0 +1,84 @@
+@use "@styles/variables" as *;
+
+.pellentesque {
+  background: linear-gradient(180deg, #fff 43.94%, #f7f8fe 100%);
+  margin-top: 116px;
+  padding-bottom: 74px;
+
+  &__vitae-block {
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #d1d4fa;
+    box-shadow: 0px 12px 30px 0px rgba(14, 68, 152, 0.15);
+    padding: 90px 75px 100px 130px;
+  }
+
+
+  &__vitae-title {
+    text-align: center;
+    color: $color-blue-gray-dark;
+    font-family: $font-hepta-slab;
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  &__vitae-text {
+    font-family: $font-adamina;
+    font-size: 16px;
+    margin-top: 15px;
+    max-width: 420px;
+    color: #7274a0;
+    line-height: 24px;
+  }
+
+  &__list {
+    margin-top: 32px;
+  }
+
+  &__list-item {
+    display: flex;
+    column-gap: 16px;
+    margin-top: 18px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__item-text {
+    font-family: $font-actor;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+  }
+
+  &__wrapper-buttons {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    column-gap: 36px;
+  }
+
+  &__line {
+    height: 20px;
+    width: 1px;
+    background: #b9bbda;
+  }
+
+  &__link-youtube {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 15px;
+    color: $color-blue-gray-dark;
+    font-family: $font-actor;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &__yellowBlock {
+    border-radius: 50px;
+  }
+}

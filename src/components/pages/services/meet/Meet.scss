@@ -1,0 +1,43 @@
+@use "@styles/variables" as *;
+
+.meet {
+  margin-top: 150px;
+
+  &__title {
+    color: #0e2859;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  &__list {
+    margin-top: 30px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list-image {
+    border-radius: 20px;
+  }
+
+  &__list-title {
+    font-family: $font-actor;
+    font-size: 20px;
+    margin-top: 18px;
+
+    font-weight: 400;
+  }
+  &__list-text {
+    font-family: $font-actor;
+    font-size: 14px;
+    letter-spacing: 0.7px;
+    line-height: 142%;
+    color: $color-blue-gray-light;
+
+    max-width: 240px;
+    font-weight: 400;
+    margin-top: 4px;
+  }
+}

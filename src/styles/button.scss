@@ -1,0 +1,30 @@
+@use "variables" as *;
+
+.button {
+  padding: 15px 25px;
+
+  border-radius: 12px;
+
+  color: white;
+  cursor: pointer;
+  transition: $transition-base;
+}
+
+.button-violet {
+  box-shadow: 0px 12px 30px 0px rgba(14, 68, 152, 0.15);
+  background: $color-violet;
+  border: 2px solid $color-violet;
+  &:hover {
+    background: inherit;
+    color: $color-violet;
+  }
+}
+.button-blue {
+  border: 1px solid #079dd9;
+  background: #079dd9;
+  box-shadow: 0px 12px 30px 0px rgba(7, 157, 217, 0.19);
+  &:hover {
+    background: inherit;
+    color: $color-blue;
+  }
+}
