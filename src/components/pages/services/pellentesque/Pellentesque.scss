@@ -5,7 +5,7 @@
   margin-top: 116px;
   padding-bottom: 74px;
 
-  &__vitae-block {
+  &__vitae {
     border-radius: 40px;
     display: flex;
     justify-content: space-between;
@@ -14,7 +14,6 @@
     box-shadow: 0px 12px 30px 0px rgba(14, 68, 152, 0.15);
     padding: 90px 75px 100px 130px;
   }
-
 
   &__vitae-title {
     text-align: center;
@@ -78,7 +77,131 @@
     font-weight: 400;
   }
 
-  &__yellowBlock {
+  &__yellow-block {
     border-radius: 50px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-top: 40px;
+    column-gap: 26px;
+  }
+
+  &__aliquam {
+    border-radius: 40px;
+    position: relative;
+    border: 1px solid #d1d4fa;
+    padding: 80px 28px 24px 65px;
+  }
+
+  &__aliquam-wrapper {
+    border: 1px solid $color-blue-gray;
+    padding: 10px;
+    position: absolute;
+    right: 28px;
+    top: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+  }
+
+  &__aliquam-title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: $color-dusty-purple;
+  }
+  &__aliquam-list {
+    margin-top: 20px;
+  }
+
+  &__aliquam-item {
+    display: flex;
+    column-gap: 6px;
+    align-items: center;
+    font-size: 16px;
+    font-family: $font-adamina;
+    font-weight: 400;
+    line-height: 150%;
+    color: $color-blue-gray;
+  }
+  &__aliquam-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background-color: $color-dusty-purple;
+  }
+
+  &__nullam {
+    border-radius: 30px;
+    border: 4px solid #858df1;
+    position: relative;
+    box-shadow: 0px 16px 20px 0px rgba(167, 183, 207, 0.09);
+    padding: 52px 80px 40px 80px;
+  }
+
+  &__nullam-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__nullam-title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: $color-white;
+  }
+  &__nullam-list {
+    margin-top: 12px;
+  }
+
+  &__nullam-item {
+    display: flex;
+    column-gap: 6px;
+    align-items: center;
+    font-size: 16px;
+    font-family: $font-adamina;
+    font-weight: 400;
+    line-height: 150%;
+    color: $color-white;
+  }
+  &__nullam-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background-color: $color-white;
+  }
+  &__nullam-button {
+    text-align: center;
+    font-family: $font-actor;
+    font-size: 14px;
+    border: 1px solid white;
+    margin-top: 36px;
+    color: $color-blue-velvet;
+    padding: 12px 54px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 400;
+    transition: $transition-base;
+
+    &:hover {
+      background: inherit;
+      color: $color-white;
+    }
+  }
+
+  &__nullam-image {
+    position: absolute;
+    right: 0px;
+    border-radius: 25px;
+    left: 0px;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 }
