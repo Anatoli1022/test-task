@@ -5,6 +5,7 @@ const Meet = () => {
   return (
     <section className="meet">
       <div className="container">
+        <p className="meet__text">Most trustworthy faces</p>
         <h2 className="meet__title">Meet our leadership</h2>
 
         <ul className="meet__list">

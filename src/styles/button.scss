@@ -1,13 +1,16 @@
 @use "variables" as *;
+@use "@styles/mixins" as *;
 
 .button {
   padding: 15px 25px;
-
   border-radius: 12px;
-
   color: white;
   cursor: pointer;
   transition: $transition-base;
+  font-size: 16px;
+  @include md-down {
+    font-size: 12px;
+  }
 }
 
 .button-violet {

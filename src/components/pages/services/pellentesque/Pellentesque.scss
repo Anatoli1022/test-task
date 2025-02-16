@@ -1,9 +1,15 @@
 @use "@styles/variables" as *;
+@use "@styles/mixins" as *;
 
 .pellentesque {
   background: linear-gradient(180deg, #fff 43.94%, #f7f8fe 100%);
   margin-top: 116px;
   padding-bottom: 74px;
+
+  @include md-down {
+    margin-top: 48px;
+    padding-bottom: 32px;
+  }
 
   &__vitae {
     border-radius: 40px;
@@ -13,6 +19,11 @@
     border: 1px solid #d1d4fa;
     box-shadow: 0px 12px 30px 0px rgba(14, 68, 152, 0.15);
     padding: 90px 75px 100px 130px;
+
+    @include md-down {
+      flex-direction: column-reverse;
+      row-gap: 44px;
+    }
   }
 
   &__vitae-title {
@@ -21,6 +32,11 @@
     font-family: $font-hepta-slab;
     font-size: 40px;
     font-weight: 600;
+
+    @include md-down {
+      text-align: left;
+      font-size: 20px;
+    }
   }
 
   &__vitae-text {
@@ -30,10 +46,19 @@
     max-width: 420px;
     color: #7274a0;
     line-height: 24px;
+
+    @include md-down {
+      font-size: 12px;
+      margin-top: 12px;
+      line-height: 18px;
+    }
   }
 
   &__list {
     margin-top: 32px;
+    @include md-down {
+      margin-top: 27px;
+    }
   }
 
   &__list-item {
@@ -44,6 +69,10 @@
     &:first-child {
       margin-top: 0;
     }
+    @include md-down {
+      margin-top: 14px;
+      column-gap: 8px;
+    }
   }
 
   &__item-text {
@@ -51,6 +80,9 @@
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.32px;
+    @include md-down {
+      font-size: 12px;
+    }
   }
 
   &__wrapper-buttons {
@@ -58,6 +90,10 @@
     display: flex;
     align-items: center;
     column-gap: 36px;
+    @include md-down {
+      margin-top: 18px;
+      column-gap: 24px;
+    }
   }
 
   &__line {
@@ -77,8 +113,16 @@
     font-weight: 400;
   }
 
+  &__youtube-text {
+    @include md-down {
+      display: none;
+    }
+  }
+
   &__yellow-block {
     border-radius: 50px;
+    width: 100%;
+    max-width: 636px;
   }
 
   &__wrapper {
@@ -86,6 +130,12 @@
     grid-template-columns: 1fr 2fr;
     margin-top: 40px;
     column-gap: 26px;
+
+    @include md-down {
+      margin-top: 12px;
+      grid-template-columns: 1fr;
+      row-gap: 12px;
+    }
   }
 
   &__aliquam {
@@ -93,6 +143,9 @@
     position: relative;
     border: 1px solid #d1d4fa;
     padding: 80px 28px 24px 65px;
+    @include md-down {
+      padding: 24px;
+    }
   }
 
   &__aliquam-wrapper {
@@ -113,9 +166,15 @@
     font-weight: 400;
     line-height: normal;
     color: $color-dusty-purple;
+    @include md-down {
+      font-size: 18px;
+    }
   }
   &__aliquam-list {
     margin-top: 20px;
+    @include md-down {
+      margin-top: 18px;
+    }
   }
 
   &__aliquam-item {
@@ -127,20 +186,31 @@
     font-weight: 400;
     line-height: 150%;
     color: $color-blue-gray;
+    @include md-down {
+      line-height: 18px;
+      font-size: 12px;
+    }
   }
   &__aliquam-dot {
     width: 6px;
     height: 6px;
     border-radius: 999px;
     background-color: $color-dusty-purple;
+    @include md-down {
+      width: 4px;
+      height: 4px;
+    }
   }
 
   &__nullam {
     border-radius: 30px;
     border: 4px solid #858df1;
     position: relative;
-    box-shadow: 0px 16px 20px 0px rgba(167, 183, 207, 0.09);
+
     padding: 52px 80px 40px 80px;
+    @include md-down {
+      padding: 24px;
+    }
   }
 
   &__nullam-content {
@@ -154,6 +224,9 @@
     font-weight: 400;
     line-height: normal;
     color: $color-white;
+    @include md-down {
+      font-size: 18px;
+    }
   }
   &__nullam-list {
     margin-top: 12px;
@@ -168,12 +241,19 @@
     font-weight: 400;
     line-height: 150%;
     color: $color-white;
+    @include md-down {
+      font-size: 12px;
+    }
   }
   &__nullam-dot {
     width: 6px;
     height: 6px;
     border-radius: 999px;
     background-color: $color-white;
+    @include md-down {
+      width: 4px;
+      height: 4px;
+    }
   }
   &__nullam-button {
     text-align: center;
@@ -183,7 +263,7 @@
     margin-top: 36px;
     color: $color-blue-velvet;
     padding: 12px 54px;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: 400;
     transition: $transition-base;
@@ -191,6 +271,11 @@
     &:hover {
       background: inherit;
       color: $color-white;
+    }
+    @include md-down {
+      margin-top: 24px;
+      font-size: 12px;
+      padding: 12px 30px;
     }
   }
 

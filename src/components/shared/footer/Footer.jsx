@@ -1,13 +1,14 @@
 import logo from "@assets/logo.svg";
 import { social, navigation } from "./data";
 import "./Footer.scss";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer__container">
         <div>
-          <img src={logo} alt="" loading="lazy" aria-hidden="true" />
+          <img src={logo} className="footer__logo" alt="" loading="lazy" aria-hidden="true" />
         </div>
         <div className="footer__content-wrapper">
           <div className="footer__content">
@@ -36,14 +37,15 @@ const Footer = () => {
               <h2 className="footer__title">Get Social with Us</h2>
               <ul className="footer__list-social">
                 {social.map((item, i) => (
-                  <li key={i} className="footer__item-social">
-                    <img
-                      className="footer__image-social"
-                      src={item.image}
-                      alt={item.alt}
-                      loading="lazy"
-                      aria-hidden="true"
-                    />
+                  <li key={i}>
+                    <a href={item.link} className="footer__link-social">
+                      <img
+                        className="footer__image-social"
+                        src={item.image}
+                        alt={item.alt}
+                        loading="lazy"
+                      />
+                    </a>
                   </li>
                 ))}
               </ul>
@@ -54,9 +56,9 @@ const Footer = () => {
             <ul className="footer__navigation-list">
               {navigation.map((item, i) => (
                 <li key={i}>
-                  <a href={item.link} className="footer__navigation-link">
+                  <Link to={item.link} className="footer__navigation-link">
                     {item.text}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

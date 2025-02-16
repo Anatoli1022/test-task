@@ -3,6 +3,25 @@ import facebook from "@assets/socialicons/facebook.svg";
 import instagram from "@assets/socialicons/instagram.svg";
 import youtube from "@assets/socialicons/youtube.svg";
 
+
+export const navigation = [
+  {
+    text: "Services",
+    link: "/services",
+  },
+  {
+    text: "Conversations",
+    link: "/conversations",
+  },
+  {
+    text: "Why us?",
+    link: "/whyUs",
+  },
+  {
+    text: "Partner with us",
+    link: "/partnerWithUs",
+  },
+];
 export const social = [
   {
     image: linked,
@@ -19,30 +38,9 @@ export const social = [
     alt: "instagram",
     link: "/",
   },
-
   {
     image: youtube,
     alt: "youtube",
     link: "/",
-  },
-];
-
-export const navigation = [
-  {
-    link: "/",
-    text: "Home",
-  },
-  {
-    image: "/services",
-    text: "Services",
-  },
-  {
-    link: "/aboutUs",
-    text: "About us",
-  },
-
-  {
-    link: "/partnerWithUs",
-    text: "Partner with us",
   },
 ];

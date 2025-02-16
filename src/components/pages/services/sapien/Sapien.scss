@@ -1,0 +1,22 @@
+@use "@styles/variables" as *;
+
+.sapien {
+  margin-top: 110px;
+  &__text {
+    text-align: center;
+    color: $color-violet;
+    text-align: center;
+    font-family: $font-actor;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__title {
+    margin-top: 10px;
+    text-align: center;
+    color: $color-dark-blue;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+  }
+}

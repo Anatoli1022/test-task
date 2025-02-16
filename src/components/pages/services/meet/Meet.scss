@@ -1,12 +1,33 @@
 @use "@styles/variables" as *;
-
+@use "@styles/mixins" as *;
 .meet {
   margin-top: 150px;
+
+  @include md-down {
+    margin-top: 32px;
+  }
+
+  &__text {
+    display: none;
+    color: $color-violet;
+    @include md-down {
+      display: block;
+      font-size: 12px;
+      max-width: 272px;
+      margin: auto;
+    }
+  }
 
   &__title {
     color: #0e2859;
     font-size: 48px;
     font-weight: 700;
+    @include md-down {
+      margin-top: 4px;
+      max-width: 272px;
+      margin: auto;
+      font-size: 24px;
+    }
   }
 
   &__list {
@@ -16,10 +37,19 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    @include md-down {
+      row-gap: 34px;
+      column-gap: 8px;
+    }
   }
 
   &__list-image {
     border-radius: 20px;
+    width: 100%;
+    max-width: 280px;
+    @include md-down {
+      max-width: 160px;
+    }
   }
 
   &__list-title {
@@ -28,6 +58,9 @@
     margin-top: 18px;
 
     font-weight: 400;
+    @include md-down {
+      font-size: 12px;
+    }
   }
   &__list-text {
     font-family: $font-actor;
@@ -35,9 +68,13 @@
     letter-spacing: 0.7px;
     line-height: 142%;
     color: $color-blue-gray-light;
-
     max-width: 240px;
     font-weight: 400;
     margin-top: 4px;
+
+    @include md-down {
+      font-size: 8px;
+      max-width: 160px;
+    }
   }
 }

@@ -41,7 +41,9 @@ const Pellentesque = () => {
                 target="_blank"
               >
                 <img src={youtube} alt="" loading="lazy" aria-hidden="true" />
-                <span>Watch video presentation</span>
+                <span className="pellentesque__youtube-text">
+                  Watch video presentation
+                </span>
               </a>
             </div>
           </div>

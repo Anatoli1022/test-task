@@ -1,9 +1,17 @@
 @use "@styles/variables" as *;
+@use "@styles/mixins" as *;
 
 .footer {
   border-top: 1px solid #d1d2e7;
   padding-top: 60px;
   padding-bottom: 24px;
+
+  @include md-down {
+    margin-top: 30px;
+    padding-top: 0;
+    border: none;
+    padding-bottom: 18px;
+  }
 
   &__container {
     max-width: 1614px;
@@ -11,15 +19,34 @@
     display: flex;
     align-items: center;
     column-gap: 190px;
+    @include md-down {
+      padding-left: 10px;
+      flex-direction: column;
+      align-items: start;
+    }
+  }
+
+  &__logo {
+    @include md-down {
+      max-width: 120px;
+    }
   }
 
   &__content-wrapper {
     width: 100%;
+    @include md-down {
+      margin-top: 40px;
+    }
   }
   &__content {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @include md-down {
+      row-gap: 50px;
+      flex-direction: column;
+      flex-direction: column-reverse;
+    }
   }
   &__text {
     font-family: $font-adamina;
@@ -28,6 +55,11 @@
     color: $color-blue-dark;
     line-height: normal;
     max-width: 500px;
+    @include md-down {
+      order: 2;
+      font-size: 20px;
+      letter-spacing: -0.4px;
+    }
   }
 
   &__title {
@@ -36,10 +68,17 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 24px;
+
+    @include md-down {
+      font-size: 14px;
+    }
   }
 
   &__wrapper-contacts {
     margin-top: 10px;
+    @include md-down {
+      margin-top: 8px;
+    }
   }
 
   &__contact-span {
@@ -64,9 +103,13 @@
     justify-content: center;
     column-gap: 8px;
     margin-top: 10px;
+    @include md-down {
+      justify-content: start;
+      margin-top: 8px;
+    }
   }
 
-  &__item-social {
+  &__link-social {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,6 +130,9 @@
   &__navigation-list {
     display: flex;
     column-gap: 80px;
+    @include md-down {
+      column-gap: 40px;
+    }
   }
 
   &__navigation-link {
@@ -97,5 +143,9 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
+    @include md-down {
+      font-size: 12px;
+      justify-content: center;
+    }
   }
 }

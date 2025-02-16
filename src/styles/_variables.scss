@@ -1,5 +1,5 @@
 // Colors
-$color-black: rgb(40, 40, 40);
+$color-black: #000;
 $color-white: #f0f1fd;
 $color-blue-dark: #33344b;
 $color-violet: #6670ee;
@@ -8,6 +8,7 @@ $color-blue-gray-dark: #1a1a29;
 $color-blue-gray: #7274a0;
 $color-blue-gray-light: #8b8ec2;
 $color-dusty-purple: #595a7e;
+$color-dark-blue: #181c50;
 $color-blue-velvet: #3f415c;
 // Fonts
 $font-hepta-slab: "Hepta Slab";
@@ -17,7 +18,7 @@ $font-actor: "Actor";
 $line-height-base: 1.6;
 
 // Animate
-$transition-base: 0.3s;
+$transition-base: 0.2s;
 
 // Breakpoints
 $breakpoint-lg-down: 1280px - 0.02px;

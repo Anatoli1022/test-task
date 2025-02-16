@@ -1,0 +1,73 @@
+@use "@styles/variables" as *;
+
+.partner {
+  margin-top: 134px;
+  position: relative;
+
+  &__container {
+    display: flex;
+    column-gap: 40px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 600;
+  }
+  &__wrapper-form {
+    max-width: 586px;
+    width: 100%;
+  }
+
+  &__form {
+    margin-top: 36px;
+    max-width: 586px;
+    width: 100%;
+  }
+
+  &__input-wrapper {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 12px;
+
+    &:first-child {
+      margin-top: 0px;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #dcdded;
+    padding: 18px 20px;
+    font-family: $font-actor;
+    font-size: 12px;
+    font-weight: 400;
+    color: $color-blue-gray;
+  }
+
+  &__select {
+    margin-top: 12px;
+    width: 100%;
+    color: $color-blue-gray;
+    border-radius: 8px;
+    border: 1px solid #dcdded;
+    padding: 18px 20px;
+    font-family: $font-actor;
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &__wrapper-button {
+    margin-top: 50px;
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+  }
+
+  &__sub-text {
+    font-size: 14px;
+    color: $color-blue-gray-light;
+    font-family: $font-actor;
+    font-weight: 400;
+  }
+}
