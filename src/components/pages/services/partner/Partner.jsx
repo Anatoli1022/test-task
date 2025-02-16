@@ -54,7 +54,7 @@ const Partner = () => {
               <option value="null">Loreeeeeeem ipsuuuuuummmmm</option>
             </select>
             <div className="partner__wrapper-button">
-              <button type="send" className="button button-violet">
+              <button type="send" className="partner__button button button-violet">
                 <img src={message} alt="" loading="eager" aria-hidden="true" />
                 <span>Contact Us</span>
               </button>

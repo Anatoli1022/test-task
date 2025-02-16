@@ -64,6 +64,12 @@
     align-items: center;
   }
 
+  &__button {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+
   &__sub-text {
     font-size: 14px;
     color: $color-blue-gray-light;
