@@ -49,16 +49,30 @@
     line-height: 168.75%;
     letter-spacing: 0.8px;
   }
-
+  &__wrapper-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 22px;
+    margin-top: 44px;
+    column-gap: 4px;
+    border-top: 1px solid #e2e3ee;
+  }
   &__list-social {
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 10px;
     @include md-down {
-      padding-top: 22px;
-      margin-top: 44px;
-      border-top: 1px solid #e2e3ee;
+      column-gap: 4px;
+    }
+  }
+
+  &__item-social {
+    @include md-down {
+      &:last-child {
+        display: none;
+      }
     }
   }
 
@@ -68,7 +82,7 @@
     justify-content: center;
     border-radius: 12px;
     border: 1px solid #d1d2e7;
-    padding: 12px;
+    padding: 10px;
   }
 
   &__image-social {
@@ -88,6 +102,10 @@
     border-radius: 12px;
     line-height: 200%;
     letter-spacing: -0.32px;
+    @include md-down {
+      font-size: 14px;
+      padding: 10px 22px;
+    }
   }
 
   &__button-menu {
