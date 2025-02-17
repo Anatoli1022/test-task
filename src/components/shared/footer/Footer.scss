@@ -5,22 +5,23 @@
   border-top: 1px solid #d1d2e7;
   padding-top: 60px;
   padding-bottom: 24px;
+  margin-top: 120px;
 
   @include md-down {
-    margin-top: 30px;
-    padding-top: 0;
+    margin-top: 200px;
+    padding-top: 40px;
     border: none;
     padding-bottom: 18px;
   }
 
   &__container {
-    max-width: 1614px;   
+    max-width: 1614px;
     margin: auto;
     display: flex;
     align-items: center;
     column-gap: 190px;
     @include md-down {
-      padding-left: 10px;
+      padding-left: 20px;
       flex-direction: column;
       align-items: start;
     }
@@ -149,4 +150,3 @@
     }
   }
 }
-      

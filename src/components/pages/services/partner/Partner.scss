@@ -1,21 +1,64 @@
 @use "@styles/variables" as *;
-
+@use "@styles/mixins" as *;
 .partner {
   margin-top: 134px;
   position: relative;
 
+  @include md-down {
+    margin-top: 60px;
+  }
+
   &__container {
-    display: flex;
-    column-gap: 40px;
+    max-width: 1350px;
+    margin: auto;
+    @include md-down {
+      max-width: 700px;
+      margin: 0px 20px;
+    }
+  }
+
+  &__image-travels {
+    position: absolute;
+    left: 0;
+    bottom: -130px;
+    @include md-down {
+      display: none;
+    }
+  }
+  &__image-forest {
+    display: none;
+    @include md-down {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -130px;
+    }
   }
 
   &__title {
     font-size: 36px;
     font-weight: 600;
+    @include md-down {
+      color: #0e2859;
+      text-align: center;
+      font-size: 20px;
+    }
   }
   &__wrapper-form {
+    position: relative;
+    z-index: 1;
     max-width: 586px;
     width: 100%;
+
+    margin-left: auto;
+    @include md-down {
+      margin: auto;
+      border-radius: 20px;
+      padding: 33px 24px 45px 24px;
+      border: 1px solid #dcdded;
+      box-shadow: 0px 16px 20px 0px rgba(167, 183, 207, 0.09);
+      background: #ffffff;
+    }
   }
 
   &__form {
@@ -24,29 +67,93 @@
     width: 100%;
   }
 
-  &__input-wrapper {
+  &__container-form {
     display: flex;
-    column-gap: 10px;
-    margin-top: 12px;
-
-    &:first-child {
-      margin-top: 0px;
+    flex-direction: column;
+    row-gap: 12px;
+    @include md-down {
+      row-gap: 8px;
     }
+  }
+
+  &__input-wrapper {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+
+    @include md-down {
+      margin-top: 8px;
+      grid-template-columns: 1fr;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 8px;
+    }
+  }
+
+  &__telephone-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  &__select-code {
+    border: none;
+    color: #595a7e;
+    font-size: 12px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-left: 24px;
+    padding-right: 24px;
+    outline: none;
+    background: transparent;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 2px;
+    background-position-y: -6px;
+    @include md-down {
+      font-size: 10px;
+    }
+  }
+
+  .telephone-input {
+    padding-left: 92px;
+  }
+
+  &__image-flag {
+    max-width: 24px;
+    width: 100%;
+  }
+
+  &__code-wrapper {
+    position: absolute;
+    left: 0;
+    margin-left: 15px;
+    top: 37%;
+    flex-direction: row-reverse;
+    display: flex;
+    // column-gap: 26px;
+
+    // @include md-down {
+    //   column-gap: 26px;
+    // }
   }
 
   &__input {
     width: 100%;
     border-radius: 8px;
+
     border: 1px solid #dcdded;
     padding: 18px 20px;
     font-family: $font-actor;
     font-size: 12px;
     font-weight: 400;
     color: $color-blue-gray;
+    @include md-down {
+      font-size: 10px;
+      padding: 10px 20px;
+    }
   }
 
   &__select {
-    margin-top: 12px;
     width: 100%;
     color: $color-blue-gray;
     border-radius: 8px;
@@ -55,6 +162,19 @@
     font-family: $font-actor;
     font-size: 12px;
     font-weight: 400;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: white;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: right;
+
+    background-position-y: 3px;
+    @include md-down {
+      font-size: 10px;
+      padding: 10px 20px;
+    }
   }
 
   &__wrapper-button {
@@ -62,12 +182,34 @@
     display: flex;
     column-gap: 8px;
     align-items: center;
+    @include md-down {
+      flex-direction: column;
+      margin-top: 10px;
+      row-gap: 16px;
+    }
   }
 
   &__button {
     display: flex;
     align-items: center;
     column-gap: 8px;
+    &:hover .partner__image-message {
+      filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(213deg)
+        brightness(90%) contrast(93%);
+    }
+    @include md-down {
+      width: 100%;
+      max-width: 288px;
+      justify-content: center;
+    }
+  }
+
+  &__image-message {
+    filter: none;
+
+    @include md-down {
+      max-width: 18px;
+    }
   }
 
   &__sub-text {
@@ -75,5 +217,8 @@
     color: $color-blue-gray-light;
     font-family: $font-actor;
     font-weight: 400;
+    @include md-down {
+      font-size: 10px;
+    }
   }
 }

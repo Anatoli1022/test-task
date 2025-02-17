@@ -1,13 +1,22 @@
 @use "@styles/variables" as *;
-
+@use "@styles/mixins" as *;
 .header {
   padding: 20px 0;
   border-bottom: 1px solid #e0e2fc;
+  position: relative;
 
   &__container {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+  }
+
+  &__block {
+    display: block;
+    @include md-down {
+      display: none;
+    }
   }
   &__logo {
     max-height: 48px;
@@ -18,12 +27,19 @@
     align-items: center;
     justify-content: center;
     column-gap: 40px;
+    @include md-down {
+      flex-direction: column;
+      align-items: start;
+    }
   }
 
   &__list-item {
     display: flex;
     align-items: center;
     flex-direction: column;
+    @include md-down {
+      display: block;
+    }
   }
 
   &__item-link {
@@ -39,6 +55,11 @@
     align-items: center;
     justify-content: center;
     column-gap: 10px;
+    @include md-down {
+      padding-top: 22px;
+      margin-top: 44px;
+      border-top: 1px solid #e2e3ee;
+    }
   }
 
   &__link-social {
@@ -67,5 +88,39 @@
     border-radius: 12px;
     line-height: 200%;
     letter-spacing: -0.32px;
+  }
+
+  &__button-menu {
+    display: none;
+
+    @include md-down {
+      display: block;
+      background: inherit;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__menu {
+    display: none;
+    @include md-down {
+      display: block;
+      position: absolute;
+      top: 90px;
+      background-color: white;
+      left: 0;
+      padding: 44px 32px 26px 32px;
+      width: 100%;
+      animation: 0.2s linear menu;
+
+      @keyframes menu {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    }
   }
 }
