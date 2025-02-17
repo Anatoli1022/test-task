@@ -14,6 +14,8 @@ const Header = () => {
 
   const [activeMenu, setActiveMenu] = useState(false);
 
+  const onclickActiveMenu = () => setActiveMenu((prevState) => !prevState);
+
   return (
     <header className="header">
       <div className="header__container container">
@@ -66,7 +68,7 @@ const Header = () => {
 
         <button
           className="header__button-menu"
-          onClick={() => setActiveMenu((prevState) => !prevState)}
+          onClick={onclickActiveMenu}
           type="button"
         >
           <img src={iconMenu} alt="" />
@@ -78,13 +80,17 @@ const Header = () => {
               <ul className="header__list">
                 {navigation.map((item, i) => (
                   <li key={i} className="header__list-item">
-                    <Link to={item.link} className="header__item-link">
+                    <Link
+                      onClick={onclickActiveMenu}
+                      to={item.link}
+                      className="header__item-link"
+                    >
                       {item.text}
                     </Link>
                   </li>
                 ))}
               </ul>
-            </nav>{" "}
+            </nav>
             <div className="header__wrapper-social">
               <ul className="header__list-social">
                 {social.map((item, i) => (

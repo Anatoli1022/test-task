@@ -1,3 +1,4 @@
+@use "@styles/mixins" as *;
 @use "@styles/variables" as *;
 
 .sapien {
@@ -9,6 +10,9 @@
     font-family: $font-actor;
     font-size: 16px;
     font-weight: 400;
+    @include md-down {
+      font-size: 10px;
+    }
   }
 
   &__title {
@@ -18,5 +22,104 @@
     text-align: center;
     font-size: 36px;
     font-weight: 700;
+    @include md-down {
+      font-size: 20px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    margin-top: 112px;
+    @include md-down {
+      margin-top: 40px;
+    }
+  }
+
+  &__image-line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 0;
+    @include md-down {
+      display: none;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 136px;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+    @include md-down {
+      &:nth-child(2n) {
+        flex-direction: column-reverse;
+      }
+      margin-top: 40px;
+      row-gap: 24px;
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__item-container {
+    max-width: 600px;
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    @include md-down {
+      max-width: 300px;
+    }
+  }
+  &__item-image {
+    @include md-down {
+      display: none;
+    }
+  }
+  &__image-block {
+    border-radius: 50px;
+    width: 100%;
+    max-width: 636px;
+
+    @include lg-down {
+      max-width: 430px;
+    }
+    @include md-down {
+      max-width: 300px;
+    }
+  }
+
+  &__wrapper-text {
+    @include lg-down {
+      max-width: 350px;
+    }
+  }
+
+  &__item-title {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    @include md-down {
+      font-size: 16px;
+      line-height: 32px;
+    }
+  }
+
+  &__item-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 8px;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.32px;
+    max-width: 440px;
+    @include md-down {
+      font-size: 12px;
+      line-height: 18px;
+    }
   }
 }

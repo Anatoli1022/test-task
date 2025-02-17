@@ -1,0 +1,19 @@
+@use "@styles/mixins" as *;
+@use "@styles/variables" as *;
+
+.reviews {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__quote-image {
+    margin-left: -32px;
+  }
+  &__blockquote {
+    font-size: 48px;
+    line-height: 54px;
+    margin-top: 12px;
+    color: $color-blue-dark;
+    max-width: 620px;
+  }
+}
