@@ -108,7 +108,6 @@ const Partner = () => {
               <select
                 className="partner__select"
                 name="Choose Your amount of Employees"
-                id=""
               >
                 <option value="null">Choose Your amount of Employees</option>
                 <option value="Sad music is playing">
@@ -130,10 +129,7 @@ const Partner = () => {
               </select>
             </div>
             <div className="partner__wrapper-button">
-              <button
-                type="send"
-                className="partner__button button button-violet"
-              >
+              <button className="partner__button button button-violet">
                 <img
                   src={message}
                   className="partner__image-message"

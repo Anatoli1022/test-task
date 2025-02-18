@@ -36,7 +36,12 @@ const Header = () => {
                     {item.text}
                   </Link>
                   {isActive(item.link) ? (
-                    <img src={border} loading="eager" aria-hidden="true" />
+                    <img
+                      src={border}
+                      alt=""
+                      loading="eager"
+                      aria-hidden="true"
+                    />
                   ) : (
                     ""
                   )}
