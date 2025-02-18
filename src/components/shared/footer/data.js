@@ -33,7 +33,7 @@ export const navigation = [
     text: "Home",
   },
   {
-    image: "/services",
+    link: "/services",
     text: "Services",
   },
   {

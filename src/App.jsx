@@ -5,6 +5,9 @@ import Services from "./pages/Services";
 import Conversation from "./pages/Conversation";
 import WhyUs from "./pages/WhyUs";
 import PartnerWithUs from "./pages/PartnerWithUs";
+import AboutUs from "./pages/AboutUs";
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +18,7 @@ function App() {
           <Route path="conversations" element={<Conversation />} />
           <Route path="whyUS" element={<WhyUs />} />
           <Route path="partnerWithUs" element={<PartnerWithUs />} />
+          <Route path="aboutUs" element={<AboutUs />} />
         </Route>
       </Routes>
     </BrowserRouter>
