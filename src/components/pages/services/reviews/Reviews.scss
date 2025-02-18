@@ -2,12 +2,30 @@
 @use "@styles/variables" as *;
 
 .reviews {
+  margin-top: 132px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e0e2fc;
+  @include sm-down {
+    border-bottom: none;
+  }
   &__container {
     display: flex;
+
     justify-content: space-between;
+
+    column-gap: 100px;
+    @include lg-down {
+      column-gap: 40px;
+    }
+    @include sm-down {
+      flex-direction: column;
+    }
   }
   &__quote-image {
     margin-left: -32px;
+    @include sm-down {
+      margin-left: 0;
+    }
   }
   &__blockquote {
     font-size: 48px;
@@ -15,5 +33,141 @@
     margin-top: 12px;
     color: $color-blue-dark;
     max-width: 620px;
+    @include md-down {
+      font-size: 20px;
+      margin-top: 16px;
+      line-height: normal;
+    }
+  }
+
+  .swiper {
+    height: 420px;
+    @include sm-down {
+      height: 330px;
+    }
+  }
+
+  .swiper-pagination {
+    bottom: 30px !important;
+  }
+
+  &__swiper {
+    max-width: 544px;
+    @include md-down {
+      margin-top: 16px;
+    }
+
+    @include sm-down {
+      max-width: 320px;
+    }
+  }
+
+  &__slider-content {
+    border-radius: 32px;
+    border: 1px solid #e8e8f3;
+    padding: 50px 50px 60px 50px;
+    @include sm-down {
+      padding: 20px 20px 70px 20px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    padding: 10px;
+    border: 1px solid $color-blue-gray-light;
+    background: inherit;
+    position: relative;
+  }
+  .swiper-pagination-bullet-active {
+    &::before {
+      position: absolute;
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      bottom: 0;
+      background: $color-violet;
+    }
+  }
+
+  &__wrapper-star {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+  }
+
+  &__star-container {
+    display: flex;
+    column-gap: 3px;
+  }
+  &__number {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: $font-actor;
+    @include sm-down {
+      display: none;
+    }
+  }
+
+  &__review-title {
+    margin-top: 60px;
+    color: #26273a;
+    font-family: $font-actor;
+    font-size: 22px;
+    font-weight: 600;
+    @include sm-down {
+      font-size: 16px;
+      margin-top: 20px;
+    }
+  }
+
+  &__review-description {
+    color: $color-blue-gray-light;
+    font-family: $font-actor;
+    font-size: 14px;
+    margin-top: 2px;
+    font-weight: 400;
+    @include sm-down {
+      font-size: 10px;
+    }
+  }
+  &__review-text {
+    color: $color-blue-gray;
+    font-family: $font-adamina;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 20px;
+
+    @include sm-down {
+      font-size: 12px;
+      line-height: 18px;
+      margin-top: 24px;
+    }
+  }
+
+  &__button-wrapper {
+    max-width: 100px;
+    overflow: hidden;
+  }
+
+  &__next-button {
+    border: none;
+    position: relative;
+    background: inherit;
+  }
+
+  &__image-button {
+    cursor: pointer;
+    position: absolute;
+    right: -174px;
+    transform: translate(-50%, -50%);
+    bottom: -58px;
+    z-index: 1;
+    @include lg-down {
+      display: none;
+    }
   }
 }

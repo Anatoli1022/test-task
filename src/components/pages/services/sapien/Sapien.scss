@@ -102,7 +102,7 @@
 
   &__item-title {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 32px;
     @include md-down {
       font-size: 16px;
@@ -120,6 +120,15 @@
     @include md-down {
       font-size: 12px;
       line-height: 18px;
+    }
+  }
+
+  &__button-wrapper {
+    margin: auto;
+    margin-top: 122px;
+    max-width: 208px;
+    @include md-down {
+      margin-top: 70px;
     }
   }
 }

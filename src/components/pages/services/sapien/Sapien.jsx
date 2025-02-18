@@ -102,6 +102,10 @@ const Sapien = () => {
             </li>
           </ul>
         </div>
+
+        <div className="sapien__button-wrapper">
+          <button className="button button-violet">Partner with us</button>
+        </div>
       </div>
     </section>
   );
