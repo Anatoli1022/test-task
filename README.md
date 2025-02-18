@@ -1,8 +1,27 @@
-# React + Vite
+## Развертывание React приложения
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. **Клонируйте репозиторий**:
 
-Currently, two official plugins are available:
+   Сначала клонируйте репозиторий на свою машину:
+   ```bash
+   git clone https://github.com/Anatoli1022/test-task.git
+   ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. **Установите зависимости**:
+
+   Перейдите в папку с проектом и установите все зависимости с помощью npm или yarn:
+   ```bash
+   cd <папка_с_проектом>
+   npm install
+   ```
+
+3. **Запустите приложение в локальном режиме**:
+
+   Для запуска приложения в режиме разработки выполните:
+   ```bash
+   npm run start
+   ```
+
+   Откройте браузер и перейдите по адресу http://localhost:3000, чтобы увидеть приложение в действии.
+
+
