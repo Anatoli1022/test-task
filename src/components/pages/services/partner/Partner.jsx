@@ -46,7 +46,7 @@ const Partner = () => {
         />
         <div className="partner__wrapper-form">
           <h2 className="partner__title">Partner With Us</h2>
-          <form className="partner__form" action="">
+          <form className="partner__form">
             <div className="partner__container-form">
               <div className="partner__input-wrapper">
                 <input
