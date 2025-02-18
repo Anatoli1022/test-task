@@ -9,13 +9,10 @@
 
 body {
   font-family: $font-hepta-slab;
-
-  font-optical-sizing: auto;
   color: $color-black;
 }
 
 main {
-  /* Выставляем отступ с высотой footer и header */
   min-height: calc(100vh - 265px - 92px);
 }
 
