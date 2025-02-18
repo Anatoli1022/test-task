@@ -129,6 +129,7 @@
     max-width: 208px;
     @include md-down {
       margin-top: 70px;
+      max-width: 156px;
     }
   }
 }
